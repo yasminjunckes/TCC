@@ -19,9 +19,11 @@ app.get('/', function(req, resp) {
     resp.sendFile(__dirname + '/html/index.html'); //renderiza o arquivo formulario no main
 });
 
-app.get('/cad', function(req, resp) {
-    resp.render('formulario'); //renderiza o arquivo formulario no main
+app.get('/cadastro', function(req, resp) {
+    resp.render('cadastro'); //renderiza o arquivo formulario no main
 });
+
+
 
 //MongoDB -----------------------------------------------------------------------
 const mongoose = require("mongoose"); 

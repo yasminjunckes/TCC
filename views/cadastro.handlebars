@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="/css/cadastro.css" type="text/css">
+<link rel="stylesheet" href="/css/menu.css" type="text/css">
+<title>Cadastro Cuidador</title>
+<div class="menu-visitante">
+    <header>
+        <h1 class="logo" role="banner ">
+            <a href="http://localhost:3000/">
+                <img src="/img/logo-allcare.png" alt="AllCare">
+            </a>
+        </h1>
+        <p id="paragrafo">All Care</p>
+        <div class="menu-visitante-entradas">
+            <a class="menu-visitante-cadastro" href="http://localhost:3000/cadastro">Cadastre-se</a>
+            <a class="menu-visitante-login" href="http://localhost:3000/login">Login</a>
+        </div>
+    </header>
+</div>
+<main id="main-cadastro">
+    <div>
+        <form action="">            
+            <fieldset>
+                <label for="idNome"><b>Nome: </b></label>
+                <input type="text" id="idNome" name="nmNome">
+                <br><br>
+                <label for="idDataNasc">Data Nasc.</label>
+                <input type="date" id="idDataNasc" name="nmDataNasc">                
+                <label for="idGenero"><b>Sexo: </b></label>
+                <select name="nmGenero" id="idGenero">
+                    <option value="masculino"><b>Masculino</b></option>
+                    <option value="feminino"><b>Feminino</b></option>
+                </select>
+                <br><br>
+                <label for="idTelefones"><b>Telefone/Celular :</b></label>
+                <input type="text" id="idTelefones" name="nmTelefones">
+
+                <input type="file" value="Fazer Upload" onclick="upload()">
+                <br><br>
+                <label for="idCpf"><b>CPF: </b></label>
+                <input type="text" id="idCpf" name="nmCpf">
+                <br><br>
+                <label for="idCep"><b>CEP: </b></label>
+                <input type="text" id="idCep" name="nmCep">
+                <br><br>
+                <label for="idEndereco"><b>Endereço: </b></label>
+                <input type="text" id="idEndereco" name="nmEndereco">
+                
+                <label for="idNumCasa"><b>Nº: </b></label>
+                <input type="idNumCasa" id="idNumCasa" name="nmNumCasa">
+                <br><br>
+                <label for="idEmail"><b>E-mail: </b></label>
+                <input type="text" id="idEmail" name="nmEmail">
+                <br><br>
+                <label for="idSenha"><b>Crie a sua senha: </b></label>
+                <input type="password" id="idSenha" name="nmSenha">
+                <br><br>
+                <label for="idConfSenha"><b>Confirme sua senha</b></label>
+                <input type="password" id="idConfSenha" name="nmConfSenha">
+                <br><br>
+                <input class="botao" type="submit" value="Cadastrar" onclick="cadastrar()">
+            </fieldset>
+        </form>
+    </div>
+</main>
+<script>
+
+    function cadastrar() {
+
+        var nome = document.getElementById("idNome").value;
+        alert("Nome: " + nome);
+        var dia = document.getElementById("idDia").value;
+        var mes = document.getElementById("idMes").value;
+        var ano = document.getElementById("idAno").value;
+        alert("Data de Nascimento: " + dia + " de " + mes + " de " + ano);
+        var genero = document.getElementById("idGenero").value;
+        alert("Sexo: " + genero);
+        var telefones = document.getElementById("idTelefones").value;
+        alert("Telefone/Celular: " + telefones);
+        var cpf = document.getElementById("idCpf").value;
+        alert("CPF: " + cpf);
+        var cep = document.getElementById("idCep").value;
+        alert("CEP: " + cep);
+        var endereco = document.getElementById("idEndereco").value;
+        var numCasa = document.getElementById("idNumCasa").value;
+        alert("Rua " + endereco + " Nº " + numCasa);
+        var email = document.getElementById("idEmail").value;
+        alert("E-mail: " + email);
+        var senha = document.getElementById("idSenha").value;
+        alert("Senha: " + senha);
+        var confSenha = document.getElementById("idConfSenha").value;
+        alert("Confirmação de senha: " + confSenha);
+
+    }
+
+</script>
