@@ -19,8 +19,8 @@ app.get('/', function(req, resp) {
     resp.sendFile(__dirname + '/html/index.html'); //renderiza o arquivo formulario no main
 });
 
-app.get('/cad', function(req, resp) {
-    resp.render('formulario'); //renderiza o arquivo formulario no main
+app.get('/busca_cuidador', function(req, resp) {
+    resp.render('busca_cuidador'); //renderiza o arquivo formulario no main
 });
 
 //MongoDB -----------------------------------------------------------------------
@@ -55,7 +55,7 @@ mongoose.model('user', UsuarioSchema);
 
 const usuario = mongoose.model('user');
 
-
+/*
 //Inserindo dados (Create do Crud)
 new usuario({
    nome: "Ivan JB", 
@@ -67,3 +67,4 @@ new usuario({
  }).catch(function(err){
      console.log("Erro do DB " + err); 
  });
+ */

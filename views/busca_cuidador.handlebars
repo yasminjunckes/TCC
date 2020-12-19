@@ -1,0 +1,73 @@
+ <link rel="stylesheet" type="text/css" href="/css/menu.css"/>
+<title>Busca</title>
+
+<div class="menu-visitante">
+    <header>
+        <h1 class="logo" role="banner ">
+            <a href="http://localhost:3000/">
+                <img src="/img/logo-allcare.png" alt="AllCare">
+            </a>
+        </h1>
+        <p>All Care</p>
+        <a class="menu-visitante-cadastro" href="http://localhost:3000/cadastro">Cadastre-se</a>
+        <a class="menu-visitante-login" href="http://localhost:3000/login">Login</a>
+    </header>
+</div>
+
+<main>
+    <div id="filtros">
+        <form action="" method="POST">
+
+            <label for="idCategoria">Selecione para quem voce esta procurando cuidador:</label>
+            <select name="nmCategoria" id="idCategortia">
+                <option value="criança">Criança</option>
+                <option value="idoso">idoso</option>
+                <option value="cachorro">Cachorro</option>
+            </select>
+
+            <label for="idTipoCuidado">Selecione o tipo de cuidado:</label>
+            <select name="nmTipoCuidado" id="idTipoCuidado">
+                <option value="minhaCasa">Na minha casa</option>
+                <option value="casaCuidador">Na casa do cuidador</option>
+            </select>
+            Sexo:
+            <input type="radio" name="sexo" id="idMenina">
+            <label for="idMenina">Menina</label>
+            <input type="radio" name="sexo" id="idMenino">
+            <label for="idMenino">Menino</label>
+
+            <label for="idIdade">Idade:</label>
+            <input type="number" name="nmIdade" id="idIdade" min="0">
+
+            <label for="idData">Data e hora:</label>
+            <input type="date" name="nmData" id="idData">
+            <input type="time" name="nmHora" id="idHora">
+        </form>
+    </div>
+    <div id="mapa">
+        <h1>Veja os cuidadores perto de você</h1>
+
+    </div>
+    <div id="resultado-busca">
+        <h1>Cuidadores disponíveis</h1>
+        
+    </div>
+</main>
+
+<footer class="footer" id="footer">
+    <div class="footer-infos">
+        <p>INFORMAÇÕES ÚTEIS</p>
+        <a href="">Quem Somos</a>
+        <a href="">Serviços</a>
+        <a href="">Contato</a>
+    </div>
+    <div class="footer-redesSociais">
+        <p>REDES SOCIAIS</p>
+        <a href="">
+            <img src="/img/icone-instagram.png" alt="Instagram All Care">
+        </a>
+        <a href="">
+            <img src="/img/icone-facebook.png" alt="Facebook All Care">
+        </a>
+    </div>
+</footer>
