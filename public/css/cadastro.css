@@ -1,0 +1,53 @@
+#main-cadastro {
+    margin-top: 40px;    
+}
+fieldset {
+    width: 700px;
+    margin-left: 300px;
+    margin-top: -30px;
+}
+#idNome {
+    width: 295px;
+}
+#img_input {
+    margin-left: 405px;
+}
+#img_preview {
+    border: 1px solid rgb(5, 187, 204);
+    width: 150px;
+    height: 150px;
+    margin-left: 485px;
+}
+.idInfos {
+    margin-top: -210px;
+}
+#idTelefones {
+    width: 100px;
+}
+#idCpf {
+    width: 100px;
+}
+#idCep {
+    width: 100px;
+}
+#idNumCasa {
+    width: 40px;
+}
+#idEmail {
+    width: 265px;
+}
+#idSenha {
+    width: 200px;
+}
+#idConfSenha {
+    width: 180px;
+}
+
+/*
+Editar perfil cuidador
+*/
+#idDescricao {
+    width: 500px;
+    height: 100px;
+    margin-left: 300px;
+}

@@ -1,11 +1,12 @@
 <link rel="stylesheet" href="/css/cadastro.css" type="text/css">
 <link rel="stylesheet" href="/css/menu.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
 <title>Cadastro Cuidador</title>
 <div class="menu-visitante">
     <header>
         <h1 class="logo" role="banner ">
             <a href="http://localhost:3000/">
-                <img src="/img/logo-allcare.png" alt="AllCare">
+                <img class="Logo" src="/img/logo-allcare.png" alt="AllCare">
             </a>
         </h1>
         <p id="paragrafo">All Care</p>
@@ -22,55 +23,130 @@
                 <label for="idNome"><b>Nome: </b></label>
                 <input type="text" id="idNome" name="nmNome">
                 <br><br>
-                <label for="idDataNasc">Data Nasc.</label>
-                <input type="date" id="idDataNasc" name="nmDataNasc">                
-                <label for="idGenero"><b>Sexo: </b></label>
-                <select name="nmGenero" id="idGenero">
-                    <option value="masculino"><b>Masculino</b></option>
-                    <option value="feminino"><b>Feminino</b></option>
-                </select>
+                <form id="fotoPerfil">
+                    <img id="img_preview" src="/img/foto-perfil.jpeg" alt="Image Preview">
+                    <br><br 
+                    ><input type="file" id="img_input">
+                </form>                
                 <br><br>
-                <label for="idTelefones"><b>Telefone/Celular :</b></label>
-                <input type="text" id="idTelefones" name="nmTelefones">
-
-                <input type="file" value="Fazer Upload" onclick="upload()">
-                <br><br>
-                <label for="idCpf"><b>CPF: </b></label>
-                <input type="text" id="idCpf" name="nmCpf">
-                <br><br>
-                <label for="idCep"><b>CEP: </b></label>
-                <input type="text" id="idCep" name="nmCep">
-                <br><br>
-                <label for="idEndereco"><b>Endereço: </b></label>
-                <input type="text" id="idEndereco" name="nmEndereco">
-                
-                <label for="idNumCasa"><b>Nº: </b></label>
-                <input type="idNumCasa" id="idNumCasa" name="nmNumCasa">
-                <br><br>
-                <label for="idEmail"><b>E-mail: </b></label>
-                <input type="text" id="idEmail" name="nmEmail">
-                <br><br>
-                <label for="idSenha"><b>Crie a sua senha: </b></label>
-                <input type="password" id="idSenha" name="nmSenha">
-                <br><br>
-                <label for="idConfSenha"><b>Confirme sua senha</b></label>
-                <input type="password" id="idConfSenha" name="nmConfSenha">
+                <div class="idInfos">
+                    <label for="idDataNasc"><b>Data Nasc: </b></label>
+                    <input type="date" id="idDataNasc" name="nmDataNasc">
+                    <label for="idGenero"><b>Sexo: </b></label>
+                    <select name="nmGenero" id="idGenero">
+                        <option value="masculino"><b>Masculino</b></option>
+                        <option value="feminino"><b>Feminino</b></option>
+                    </select>
+                    <br><br>
+                    <label for="idTelefones"><b>Telefone/Celular :</b></label>
+                    <input type="text" id="idTelefones" name="nmTelefones">
+                    <br><br>
+                    <label for="idCpf"><b>CPF: </b></label>
+                    <input type="text" id="idCpf" name="nmCpf">
+                    <br><br>
+                    <label for="idCep"><b>CEP: </b></label>
+                    <input type="text" id="idCep" name="nmCep">
+                    <br><br>
+                    <label for="idEndereco"><b>Endereço: </b></label>
+                    <input type="text" id="idEndereco" name="nmEndereco">
+                    
+                    <label for="idNumCasa"><b>Nº: </b></label>
+                    <input type="idNumCasa" id="idNumCasa" name="nmNumCasa">
+                    <br><br>
+                    <label for="idEmail"><b>E-mail: </b></label>
+                    <input type="text" id="idEmail" name="nmEmail">
+                    <br><br>
+                    <label for="idSenha"><b>Crie a sua senha: </b></label>
+                    <input type="password" id="idSenha" name="nmSenha">
+                    <br><br>
+                    <label for="idConfSenha"><b>Confirme sua senha</b></label>
+                    <input type="password" id="idConfSenha" name="nmConfSenha">
+                </div>
                 <br><br>
                 <input class="botao" type="submit" value="Cadastrar" onclick="cadastrar()">
+                <input type="button" value="Quero ser um cuidador" id="idQueroSerCuidador">
             </fieldset>
+            <div id="idEditar-Perfil" style="display: none;">
+                <input type="file" id="idAddMaisFotos" alt="Add Mais Fotos">
+                <br><br>
+                <label for="idDescricao"></label>
+                <input type="text" id="idDescricao" name="nmDescricao" placeholder="Descreva sobre você">
+            </div>
         </form>
     </div>
 </main>
+<footer class="footer" id="footer">
+    <div class="footer-infos">
+        <p>INFORMAÇÕES ÚTEIS</p>
+        <a href="">Quem Somos</a><br>
+        <a href="">Serviços</a><br>
+        <a href="">Contato</a><br>
+    </div>
+    <div class="footer-redesSociais">
+        <p>REDES SOCIAIS</p>
+        <a href="">
+            <img src="/img/icone-instagram.png" alt="Instagram All Care">
+        </a>
+        <a href="">
+            <img src="/img/icone-facebook.png" alt="Facebook All Care">
+        </a>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
+
+    document.getElementById("idQueroSerCuidador").addEventListener("click", function(){
+        document.getElementById("idEditar-Perfil").style.display="block";
+    })
+
+    function ImagePreview(input){
+
+        if (input.files && input.files[0])
+        {
+
+            var r = new FileReader();
+
+            r.onload = function(e)
+            {
+                $("#img_preview").show();
+                $("#img_preview").attr("src", e.target.result);
+            }
+
+            r.readAsDataURL(input.files[0]);
+
+        }
+    }
+
+    $().ready(function() {
+
+        hide_empty_image = false;
+        set_blank_to_empty_image = false;
+        set_image_border = true;
+
+        if (hide_empty_image)
+            $("#img_preview").hide();
+
+        if (set_blank_to_empty_image)
+            $("#img_preview").attr("src","data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=");
+
+        if (set_image_border)
+            $("#img_preview").css("border", "1px solid #05bbcc");
+    
+        $("#img_preview").css("width", "150px");
+        $("#img_preview").css("height", "150px");
+
+        $("#img_input").change(function(){
+            ImagePreview(this);
+        });
+
+    });
 
     function cadastrar() {
 
         var nome = document.getElementById("idNome").value;
         alert("Nome: " + nome);
-        var dia = document.getElementById("idDia").value;
-        var mes = document.getElementById("idMes").value;
-        var ano = document.getElementById("idAno").value;
-        alert("Data de Nascimento: " + dia + " de " + mes + " de " + ano);
+        var dataNasc = document.getElementById("idDataNasc").value;
+        alert("Data de nascimento: " + dataNasc);
         var genero = document.getElementById("idGenero").value;
         alert("Sexo: " + genero);
         var telefones = document.getElementById("idTelefones").value;

@@ -37,21 +37,133 @@ mongoose.connect("mongodb://localhost/allcare", {useMongoClient: true})
       console.log("Erro na conexao " + err); 
   });
 
-  const UsuarioSchema = mongoose.Schema({
 
-    nome:{
-       type: String, 
-       require: true
-    }, 
-    senha:{
-       type: Number, 
-       require: true    
-    }, 
-    email:{
-       type: String 
+const UsuarioSchema = mongoose.Schema({
+    
+    nome: {
+        type: String,
+        require: true
+    },
+    dataNasc: {
+        type: String,
+        require: true
+    },
+    senha: {
+        type: String,
+        require: true
+    },
+    CPF: {
+        type: String,
+        require: true
+    },
+    email: {
+        type: String,
+        require: true
+    },
+    tipoUsuario: {
+        type: String,
+        require: true
+    },
+    genero:{
+        type: String,
+        require: true
+    },
+    celular:{
+        type: String,
+        require: true
     }
 });
 
+const CuidadorSchema = mongoose.Schema({
+
+    agenda: {
+        type: String,
+        require: true
+    },
+    valor: {
+        type: Number,
+        require: true
+    },
+    descricao: {
+        type: String,
+        require: true
+    },
+    cachorro: {
+        type: Boolean,
+        require: true
+    },
+    idoso: {
+        type: Boolean,
+        require: true
+    },
+    crianca: {
+        type: Boolean,
+        require: true
+    },
+    idCuidador: {
+        type: String,
+        require: true
+    }
+
+});
+
+const ServicoSchema = mongoose.Schema({
+
+    tipo: {
+        type: String,
+        require: true
+    },
+    dataInicio: {
+        type: String,
+        require: true
+    },
+    dataFim: {
+        type: String,
+        require: true
+    },
+    idUsuarioCuidador: {
+        type: String,
+        require: true
+    },
+    idUsuarioCliente: {
+        type: String,
+        require: true
+    }
+    
+});
+
+const EnderecoSchema = mongoose.Schema({
+
+    cep: {
+        type: String,
+        require: true
+    },
+    estado: {
+        type: String,
+        require: true
+    },
+    cidade: {
+        type: String,
+        require: true
+    },
+    rua: {
+        type: String,
+        require: true
+    },
+    numero: {
+        type: String,
+        require: true
+    },
+    logradouro: {
+        type: String,
+        require: true
+    },
+    idUsuario: {
+        type: String,
+        require: true
+    }
+});
+/*
 //Atribuindo o schema à collection
 mongoose.model('user', UsuarioSchema);
 
@@ -69,3 +181,4 @@ new usuario({
  }).catch(function(err){
      console.log("Erro do DB " + err); 
  });
+ */
