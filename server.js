@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express(); 
 const path = require('path'); 
+const bodyParser = require('body-parser');
+
+//Config body-parser
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json()); 
 
 const handlebars = require('express-handlebars'); 
 
@@ -16,11 +21,30 @@ app.listen(3000, function() {
 }); 
 
 app.get('/', function(req, resp) {
-    resp.sendFile(__dirname + '/html/index.html'); //renderiza o arquivo formulario no main
+    resp.sendFile(__dirname + '/html/index.html'); 
 });
 
+
 app.get('/cadastro', function(req, resp) {
-    resp.render('cadastro'); //renderiza o arquivo formulario no main
+    resp.render('cadastro');
+
+app.get('/busca_cuidador', function(req, resp) {
+    resp.render('busca_cuidador');    
+});
+
+app.post('/busca_cuidador', function(req, resp) {
+    var categoriaCuidado = req.body.nmCategoria;
+    var tipoCuidado = req.body.nmTipoCuidado;
+    var sexo = req.body.nmSexo;
+    var idade = req.body.nmIdade;  
+    var data = req.body.nmData;   
+    var hora = req.body.nmHora;   
+
+    usuario.find()  
+    .then(function(doc) {
+        console.log(doc);
+        resp.send(categoriaCuidado+"<br>"+tipoCuidado+"<br>"+sexo+"<br>"+idade+"<br>"+data+"<br>"+hora+"<br>"+doc);  
+    });
 });
 
 
@@ -163,18 +187,24 @@ const EnderecoSchema = mongoose.Schema({
         require: true
     }
 });
-/*
+
 //Atribuindo o schema à collection
-mongoose.model('user', UsuarioSchema);
+const usuario = mongoose.model('user', UsuarioSchema);
+mongoose.model('cuidador', CuidadorSchema);
+mongoose.model('servico', ServicoSchema);
+mongoose.model('endereco', EnderecoSchema);
 
-const usuario = mongoose.model('user');
-
-
+/*
 //Inserindo dados (Create do Crud)
 new usuario({
    nome: "Ivan JB", 
-   senha: 1234, 
-   email: "ivan.borchardt.cobol@gmail.com"
+   dataNasc: 1234, 
+   senha: "ivan.borchardt.cobol@gmail.com",
+   CPF: "43564",
+   email: "jdskhf\iodsdfhxtgrf",
+   tipoUsuario: "CUIDADOR",
+   genero: "f",
+   celular: "23435435643"
 }).save()
  .then(function(){
      console.log("Usuario Cadastrado com sucesso!");
@@ -182,3 +212,4 @@ new usuario({
      console.log("Erro do DB " + err); 
  });
  */
+
