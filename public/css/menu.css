@@ -1,15 +1,13 @@
 .Logo {
     width: 80px;
     margin-left: 320px;
-    margin-top: -28px;
+    margin-top: -7px;
 }
-
 #paragrafo {
     margin-left: 400px;
     margin-top: -90px;
     font-size: 50px;
 }
-
 .menu-visitante-entradas {
     float: right;
     margin-top: -80px;
@@ -19,19 +17,17 @@
 
 .menu-visitante {
     background-color: #92DECB;
-    border: 3px solid;
-    border-color: #4ecaab;
-    margin-top: -11px;
+    margin-top: -22px;
     margin-left: -11px;
-    width: 1365px;
+    width: 1352px;
     height: 60px;
+    border-bottom-color: #4ecaab;
+    border-bottom-style: solid;
 }
-
 .menu-visitante-cadastro {
     color: black;
     text-decoration: none;
 }
-
 a.menu-visitante-login {
     color: black;
     text-decoration: none;

@@ -24,6 +24,10 @@ app.get('/', function(req, resp) {
     resp.sendFile(__dirname + '/html/index.html'); 
 });
 
+
+app.get('/cadastro', function(req, resp) {
+    resp.render('cadastro');
+
 app.get('/busca_cuidador', function(req, resp) {
     resp.render('busca_cuidador');    
 });
@@ -41,8 +45,9 @@ app.post('/busca_cuidador', function(req, resp) {
         console.log(doc);
         resp.send(categoriaCuidado+"<br>"+tipoCuidado+"<br>"+sexo+"<br>"+idade+"<br>"+data+"<br>"+hora+"<br>"+doc);  
     });
-    
 });
+
+
 
 //MongoDB -----------------------------------------------------------------------
 const mongoose = require("mongoose"); 
@@ -208,7 +213,3 @@ new usuario({
  });
  */
 
-
-function buscar(){
-    
-}
