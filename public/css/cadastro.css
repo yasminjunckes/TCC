@@ -1,0 +1,170 @@
+#main-cadastro {
+    margin-top: 40px;    
+}
+.fieldCadastro {
+    width: 700px;
+    margin-left: 300px;
+    margin-top: -30px;
+    border-color: #92DECB;
+}
+#idNome {
+    width: 295px;
+}
+#img_input {
+    margin-left: 405px;
+}
+#img_preview {
+    border: 1px solid rgb(5, 187, 204);
+    width: 150px;
+    height: 150px;
+    margin-left: 485px;
+}
+.idInfos {
+    margin-top: -210px;
+}
+#idTelefones {
+    width: 100px;
+}
+#idCpf {
+    width: 100px;
+}
+#idCep {
+    width: 100px;
+}
+#idNumCasa {
+    width: 40px;
+}
+#idEmail {
+    width: 265px;
+}
+#idSenha {
+    width: 200px;
+}
+#idConfSenha {
+    width: 180px;
+}
+
+/*
+Editar perfil cuidador
+*/
+#idDescricao {
+    width: 500px;
+    height: 100px;
+    margin-left: 0px;
+}
+.fieldEditarPerfil {
+    width: 700px;
+    margin-left: 300px;
+    border-color: #92DECB;
+}
+.integral {
+    margin-left: 125px;
+}
+#idPeriodoIntegral {
+    margin-left: 20px;
+}
+.manha {
+    margin-left: 250px;
+    margin-top: -38px;
+}
+#idPeriodoManha {
+    margin-left: 20px;
+}
+.tarde {
+    margin-left: 350px;
+    margin-top: -38px;
+}
+#idPeriodoTarde {
+    margin-left: 15px;
+}
+.noite {
+    margin-left: 450px;
+    margin-top: -38px;
+}
+#idPeriodoNoite {
+    margin-left: 13px;
+}
+#idDomingoIntegral {
+    margin-left: 79px;
+}
+#idDomingoManha {
+    margin-left: 105px;
+}
+#idDomingoTarde {
+    margin-left: 75px;
+}
+#idDomingoNoite {
+    margin-left: 78px;
+}
+#idSegundaIntegral {
+    margin-left: 42px;
+}
+#idSegundaManha {
+    margin-left: 105px;
+}
+#idSegundaTarde {
+    margin-left: 75px;
+}
+#idSegundaNoite {
+    margin-left: 78px;
+}
+#idTercaIntegral {
+    margin-left: 62px;
+}
+#idTercaManha {
+    margin-left: 105px;
+}
+#idTercaTarde {
+    margin-left: 75px;
+}
+#idTercaNoite {
+    margin-left: 78px;
+}
+#idQuartaIntegral {
+    margin-left: 50px;
+}
+#idQuartaManha {
+    margin-left: 105px;
+}
+#idQuartaTarde {
+    margin-left: 75px;
+}
+#idQuartaNoite {
+    margin-left: 78px;
+}
+#idQuintaIntegral {
+    margin-left: 53px;
+}
+#idQuintaManha {
+    margin-left: 105px;
+}
+#idQuintaTarde {
+    margin-left: 75px;
+}
+#idQuintaNoite {
+    margin-left: 78px;
+}
+#idSextaIntegral {
+    margin-left: 65px;
+}
+#idSextaManha {
+    margin-left: 105px;
+}
+#idSextaTarde {
+    margin-left: 75px;
+}
+#idSextaNoite {
+    margin-left: 78px;
+}
+#idSabadoIntegral {
+    margin-left: 94px;
+}
+#idSabadoManha {
+    margin-left: 105px;
+}
+#idSabadoTarde {
+    margin-left: 75px;
+}
+#idSabadoNoite {
+    margin-left: 78px;
+}

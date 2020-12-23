@@ -1,0 +1,203 @@
+<link rel="stylesheet" href="/css/cadastro.css" type="text/css">
+<link rel="stylesheet" href="/css/menu.css" type="text/css">
+
+<title>Cadastro Cuidador</title>
+<div class="menu-visitante">
+    <header>
+        <h1 class="logo" role="banner ">
+            <a href="http://localhost:3000/">
+                <img class="Logo" src="/img/logo-allcare.png" alt="AllCare">
+            </a>
+        </h1>
+        <p id="paragrafo">All Care</p>
+        <div class="menu-visitante-entradas">
+            <a class="menu-visitante-cadastro" href="http://localhost:3000/cadastro">Cadastre-se</a>
+            <a class="menu-visitante-login" href="http://localhost:3000/login">Login</a>
+        </div>
+    </header>
+</div>
+<main id="main-cadastro">
+    <div>
+        <form action="/cadastro" method="POST">            
+            <fieldset class="fieldCadastro">
+                <label for="idNome"><b>Nome: </b></label>
+                <input type="text" id="idNome" name="nmNome">
+                <br><br>
+                <img id="img_preview" src="/img/foto-perfil.jpeg" alt="Image Preview">
+                <br><br>
+                <input type="file" id="img_input">             
+                <br><br>
+                <div class="idInfos">
+                    <label for="idDataNasc"><b>Data Nasc: </b></label>
+                    <input type="date" id="idDataNasc" name="nmDataNasc">
+                    <label for="idGenero"><b>Sexo: </b></label>
+                    <select name="nmGenero" id="idGenero">
+                        <option value="masculino"><b>Masculino</b></option>
+                        <option value="feminino"><b>Feminino</b></option>
+                    </select>
+                    <br><br>
+                    <label for="idTelefones"><b>Telefone/Celular :</b></label>
+                    <input type="text" id="idTelefones" name="nmTelefones">
+                    <br><br>
+                    <label for="idCpf"><b>CPF: </b></label>
+                    <input type="text" id="idCpf" name="nmCpf">
+                    <br><br>
+                    <label for="idCep"><b>CEP: </b></label>
+                    <input type="text" id="idCep" name="nmCep">
+                    <br><br>
+                    <label for="idEndereco"><b>Endereço: </b></label>
+                    <input type="text" id="idEndereco" name="nmEndereco">
+                    
+                    <label for="idNumCasa"><b>Nº: </b></label>
+                    <input type="idNumCasa" id="idNumCasa" name="nmNumCasa">
+                    <br><br>
+                    <label for="idEmail"><b>E-mail: </b></label>
+                    <input type="text" id="idEmail" name="nmEmail">
+                    <br><br>
+                    <label for="idSenha"><b>Crie a sua senha: </b></label>
+                    <input type="password" id="idSenha" name="nmSenha">
+                    <br><br>
+                    <label for="idConfSenha"><b>Confirme sua senha</b></label>
+                    <input type="password" id="idConfSenha" name="nmConfSenha">
+                </div>
+                <br><br>
+                <input class="botao" type="submit" value="Cadastrar" onclick="cadastrar()">
+                <input type="button" value="Quero ser um cuidador" id="idQueroSerCuidador">
+            </fieldset>
+
+
+            
+            <br>
+            <div id="idEditar-Perfil" style="display: none;">
+                <fieldset class="fieldEditarPerfil">
+                    <p><b>Selecione o período e os dias que deseja trabalhar</b></p>
+                    <div class="integral">                        
+                        <label for="idPeriodoIntegral"><b>Integral</b></label>
+                        <br>                    
+                        <input type="checkbox" id="idPeriodoIntegral" name="nmPeriodoIntegral">                        
+                    </div>
+                    
+                    <div class="manha">
+                        <label for="idPeriodoManha"><b>Manhã</b></label>                    
+                        <br>
+                        <input type="checkbox" id="idPeriodoManha" name="nmPeriodoManha">
+                    </div>
+                    
+                    <div class="tarde">
+                        <label for="idPeriodoTarde"><b>Tarde</b></label>  
+                        <br>                  
+                        <input type="checkbox" id="idPeriodoTarde" name="nmPeriodoTarde">
+                    </div>
+                    
+                    <div class="noite">
+                        <label for="idPeriodoNoite"><b>Noite</b></label>  
+                        <br>                  
+                        <input type="checkbox" id="idPeriodoNoite" name="nmPeriodoNoite">
+                    </div>
+                    
+                    <label for="idDomingo"><b>Domingo</b></label>
+                    <input type="checkbox" id="idDomingoIntegral" name="nmDomingoIntegral">
+                    <input type="checkbox" id="idDomingoManha" name="nmDomingoManha">
+                    <input type="checkbox" id="idDomingoTarde" name="nmDomingoTarde">
+                    <input type="checkbox" id="idDomingoNoite" name="nmDomingoNoite">
+                    <br>
+                    <label for="idSegunda"><b>Segunda-Feira</b></label>
+                    <input type="checkbox" id="idSegundaIntegral" name="nmSegunda">
+                    <input type="checkbox" id="idSegundaManha" name="nmSegundaManha">
+                    <input type="checkbox" id="idSegundaTarde" name="nmSegundaTarde">
+                    <input type="checkbox" id="idSegundaNoite" name="nmSegundaNoite">
+                    <br>
+                    <label for="idTerca"><b>Terça-Feira</b></label>
+                    <input type="checkbox" id="idTercaIntegral" name="nmTerca">
+                    <input type="checkbox" id="idTercaManha" name="nmTercaManha">
+                    <input type="checkbox" id="idTercaTarde" name="nmTercaTarde">
+                    <input type="checkbox" id="idTercaNoite" name="nmTercaNoite">
+                    <br>
+                    <label for="idQuarta"><b>Quarta-Feira</b></label>
+                    <input type="checkbox" id="idQuartaIntegral" name="nmQuarta">
+                    <input type="checkbox" id="idQuartaManha" name="nmQuartaManha">
+                    <input type="checkbox" id="idQuartaTarde" name="nmQuartaTarde">
+                    <input type="checkbox" id="idQuartaNoite" name="nmQuartaNoite">
+                    <br>
+                    <label for="idQuinta"><b>Quinta-Feira</b></label>
+                    <input type="checkbox" id="idQuintaIntegral" name="nmQuinta">
+                    <input type="checkbox" id="idQuintaManha" name="nmQuintaManha">
+                    <input type="checkbox" id="idQuintaTarde" name="nmQuintaTarde">
+                    <input type="checkbox" id="idQuintaNoite" name="nmQuintaNoite">
+                    <br>
+                    <label for="idSexta"><b>Sexta-Feira</b></label>
+                    <input type="checkbox" id="idSextaIntegral" name="nmSexta">
+                    <input type="checkbox" id="idSextaManha" name="nmSextaManha">
+                    <input type="checkbox" id="idSextaTarde" name="nmSextaTarde">
+                    <input type="checkbox" id="idSextaNoite" name="nmSextaNoite">
+                    <br>
+                    <label for="idSabado"><b>Sábado</b></label>
+                    <input type="checkbox" id="idSabadoIntegral" name="nmSabado">
+                    <input type="checkbox" id="idSabadoManha" name="nmSabadoManha">
+                    <input type="checkbox" id="idSabadoTarde" name="nmSabadoTarde">
+                    <input type="checkbox" id="idSabadoNoite" name="nmSabadoNoite">
+                    <br>                    
+                    <form id="addFotosPerfil">
+                        <img id="imagens_previews" src="/img/foto-perfil.jpeg" alt="Imagens Previews">
+                        <br><br><input type="file" id="imagens_input" multiple>
+                    </form>
+                        <br><br>
+                        <label for="idDescricao"></label>
+                        <input type="text" id="idDescricao" name="nmDescricao" placeholder="Descreva sobre você">
+                        <br><br>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+    document.getElementById("idQueroSerCuidador").addEventListener("click", function(){
+        document.getElementById("idEditar-Perfil").style.display="block";
+    });
+
+    function ImagePreview(input){
+
+        if (input.files && input.files[0])
+        {
+
+            var r = new FileReader();
+
+            r.onload = function(e)
+            {
+                $("#img_preview").show();
+                $("#img_preview").attr("src", e.target.result);
+            }
+
+            r.readAsDataURL(input.files[0]);
+
+        }
+    }
+
+    $().ready(function() {
+
+        hide_empty_image = false;
+        set_blank_to_empty_image = false;
+        set_image_border = true;
+
+        if (hide_empty_image)
+            $("#img_preview").hide();
+
+        if (set_blank_to_empty_image)
+            $("#img_preview").attr("src","data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=");
+
+        if (set_image_border)
+            $("#img_preview").css("border", "1px solid #05bbcc");
+    
+        $("#img_preview").css("width", "150px");
+        $("#img_preview").css("height", "150px");
+
+        $("#img_input").change(function(){
+            ImagePreview(this);
+        });
+
+    });
+</script>

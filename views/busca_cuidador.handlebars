@@ -1,0 +1,75 @@
+<link rel="stylesheet" type="text/css" href="/css/menu.css"/>
+<link rel="stylesheet" type="text/css" href="/css/tela-busca.css"/>
+
+<title>Busca</title>
+
+<div class="menu-visitante">
+    <header>
+        <h1 class="logo" role="banner ">
+            <a href="http://localhost:3000/">
+                <img class="Logo" src="/img/logo-allcare.png" alt="AllCare">
+            </a>
+        </h1>
+        <p id="paragrafo">All Care</p>
+        <div class="menu-visitante-entradas">
+            <a class="menu-visitante-cadastro" href="http://localhost:3000/cadastro">Cadastre-se</a>
+            <a class="menu-visitante-login" href="http://localhost:3000/login">Login</a>
+        </div>
+    </header>
+</div>
+
+<main>
+    <div id="tela-busca">
+        <fieldset>
+            <div id="filtros">
+                <form action="http://localhost:3000/busca_cuidador" method="POST">
+
+                    <label for="idCategoria">Selecione para quem voce esta procurando cuidador:</label>
+                    <select name="nmCategoria" id="idCategortia">
+                        <option value="criança">Criança</option>
+                        <option value="idoso">idoso</option>
+                        <option value="cachorro">Cachorro</option>
+                    </select><br>
+
+                    <label for="idTipoCuidado">Selecione o tipo de cuidado:</label>
+                    <select name="nmTipoCuidado" id="idTipoCuidado">
+                        <option value="minhaCasa">Na minha casa</option>
+                        <option value="casaCuidador">Na casa do cuidador</option>
+                    </select><br>
+
+                    <label for="idSexo">Sexo:</label>
+                    <select name="nmSexo" id="idSexo">
+                        <option value="m">MASC</option>
+                        <option value="f">FEM</option>
+                    </select>
+
+                    <label for="idIdade">Idade:</label>
+                    <input type="number" name="nmIdade" id="idIdade" min="0"><br>
+
+                    <label for="idData">Data:</label>
+                    <input type="date" name="nmData" id="idData"><br>
+
+                    <label for="idHora">Hora:</label>
+                    <select name="nmHora" id="idHora">
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                        <option value="integral">Integral</option>
+                    </select><br>
+
+                    <button type="submit">FILTRAR</button>
+                </form>
+            </div>
+
+            <div id="mostrar-mapa">
+                <h1>Veja os cuidadores perto de você:</h1>
+                <div id="mapa"></div> 
+            </div>
+        </fieldset>
+
+        <div id="resultado-busca">
+            <h1>Cuidadores disponíveis:</h1>
+
+        </div>
+    </div>
+</main>
