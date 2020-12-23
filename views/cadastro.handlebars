@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/cadastro.css" type="text/css">
 <link rel="stylesheet" href="/css/menu.css" type="text/css">
-
+<link rel="stylesheet" href="/css/editar_perfil_cuidador.css" type="text/css">
 <title>Cadastro Cuidador</title>
 <div class="menu-visitante">
     <header>
@@ -24,7 +24,7 @@
                 <input type="text" id="idNome" name="nmNome">
                 <br><br>
                 <form id="fotoPerfil">
-                    <img id="img_preview" src="/img/foto-perfil.jpeg" alt="Image Preview">
+                    <img id="img_preview" src="/img/adicionar-fotos.png" alt="Image Preview">
                     <br><br 
                     ><input type="file" id="img_input">
                 </form>                
@@ -68,76 +68,153 @@
             </fieldset>
             <br>
             <div id="idEditar-Perfil" style="display: none;">
-                <fieldset class="fieldEditarPerfil">
+                <fieldset class="fieldEditarPerfil">                    
+                    <p><b>Selecione a categoria que você quer cuidar</b></p>
+                    <label for="idCuidarIdoso"><b>Idoso</b></label>
+                    <input type="checkbox" id="idCuidarIdoso" name="nmCuidarIdoso">
+                    <label for="idCuidarCrianca"><b>Criança</b></label>
+                    <input type="checkbox" id="idCuidarCrianca" name="nmCuidarCrianca">
+                    <label for="idCuidarCachorro"><b>Cachorro</b></label>
+                    <input type="checkbox" id="idCuidarCachorro" name="nmCuidarCachorro">                    
+                    <br>                    
                     <p><b>Selecione o período e os dias que deseja trabalhar</b></p>
-                    <div class="integral">                        
-                        <label for="idPeriodoIntegral"><b>Integral</b></label>
-                        <br>                    
-                        <input type="checkbox" id="idPeriodoIntegral" name="nmPeriodoIntegral">                        
-                    </div>
-                    
-                    <div class="manha">
-                        <label for="idPeriodoManha"><b>Manhã</b></label>                    
-                        <br>
-                        <input type="checkbox" id="idPeriodoManha" name="nmPeriodoManha">
-                    </div>
-                    
-                    <div class="tarde">
-                        <label for="idPeriodoTarde"><b>Tarde</b></label>  
-                        <br>                  
-                        <input type="checkbox" id="idPeriodoTarde" name="nmPeriodoTarde">
-                    </div>
-                    
-                    <div class="noite">
-                        <label for="idPeriodoNoite"><b>Noite</b></label>  
-                        <br>                  
-                        <input type="checkbox" id="idPeriodoNoite" name="nmPeriodoNoite">
-                    </div>
-                    
-                    <label for="idDomingo"><b>Domingo</b></label>
-                    <input type="checkbox" id="idDomingoIntegral" name="nmDomingoIntegral">
-                    <input type="checkbox" id="idDomingoManha" name="nmDomingoManha">
-                    <input type="checkbox" id="idDomingoTarde" name="nmDomingoTarde">
-                    <input type="checkbox" id="idDomingoNoite" name="nmDomingoNoite">
-                    <br>
-                    <label for="idSegunda"><b>Segunda-Feira</b></label>
-                    <input type="checkbox" id="idSegundaIntegral" name="nmSegunda">
-                    <input type="checkbox" id="idSegundaManha" name="nmSegundaManha">
-                    <input type="checkbox" id="idSegundaTarde" name="nmSegundaTarde">
-                    <input type="checkbox" id="idSegundaNoite" name="nmSegundaNoite">
-                    <br>
-                    <label for="idTerca"><b>Terça-Feira</b></label>
-                    <input type="checkbox" id="idTercaIntegral" name="nmTerca">
-                    <input type="checkbox" id="idTercaManha" name="nmTercaManha">
-                    <input type="checkbox" id="idTercaTarde" name="nmTercaTarde">
-                    <input type="checkbox" id="idTercaNoite" name="nmTercaNoite">
-                    <br>
-                    <label for="idQuarta"><b>Quarta-Feira</b></label>
-                    <input type="checkbox" id="idQuartaIntegral" name="nmQuarta">
-                    <input type="checkbox" id="idQuartaManha" name="nmQuartaManha">
-                    <input type="checkbox" id="idQuartaTarde" name="nmQuartaTarde">
-                    <input type="checkbox" id="idQuartaNoite" name="nmQuartaNoite">
-                    <br>
-                    <label for="idQuinta"><b>Quinta-Feira</b></label>
-                    <input type="checkbox" id="idQuintaIntegral" name="nmQuinta">
-                    <input type="checkbox" id="idQuintaManha" name="nmQuintaManha">
-                    <input type="checkbox" id="idQuintaTarde" name="nmQuintaTarde">
-                    <input type="checkbox" id="idQuintaNoite" name="nmQuintaNoite">
-                    <br>
-                    <label for="idSexta"><b>Sexta-Feira</b></label>
-                    <input type="checkbox" id="idSextaIntegral" name="nmSexta">
-                    <input type="checkbox" id="idSextaManha" name="nmSextaManha">
-                    <input type="checkbox" id="idSextaTarde" name="nmSextaTarde">
-                    <input type="checkbox" id="idSextaNoite" name="nmSextaNoite">
-                    <br>
-                    <label for="idSabado"><b>Sábado</b></label>
-                    <input type="checkbox" id="idSabadoIntegral" name="nmSabado">
-                    <input type="checkbox" id="idSabadoManha" name="nmSabadoManha">
-                    <input type="checkbox" id="idSabadoTarde" name="nmSabadoTarde">
-                    <input type="checkbox" id="idSabadoNoite" name="nmSabadoNoite">
+                    <table id="calendario-Cuidador">
+                        <tr>
+                            <th>
+
+                            </th>
+                            <th>
+                                <label for="idPeriodoManha">
+                                    Manhã
+                                </label>
+                            </th>
+                            <th>
+                                <label for="idPerdiodoTarde">
+                                    Tarde
+                                </label>
+                            </th>
+                            <th>
+                                <label for="idPeriodoNoite">
+                                    Noite
+                                </label>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="idDomingo">
+                                    Domingo
+                                </label>
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idDomingoManha" name="nmDomingoManha">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idDomingoTarde" name="nmDomingoTarde">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idDomingoNoite" name="nmDomingoNoite">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="idSegunda">
+                                    Segunda-feira
+                                </label>
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idSegundaManha" name="nmSegundaManha">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idSegundaTarde" name="nmSegundaTarde">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idSegundaNoite" name="nmSegundaNoite">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="idTerca">
+                                    Terça-feira
+                                </label>
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idTercaManha" name="nmTercaManha">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idTercaTarde" name="nmTercaTarde">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idTercaNoite" name="nmTercaNoite">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="idQuarta">
+                                    Quarta-feira
+                                </label>
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idQuartaManha" name="nmQuartaManha">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idQuartaTarde" name="nmQuartaTarde">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idQuartaNoite" name="nmQuartaNoite">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="idQuinta">
+                                    Quinta-feira
+                                </label>
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idQuintaManha" name="nmQuintaManha">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idQuintaTarde" name="nmQuintaTarde">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idQuintaNoite" name="nmQuintaNoite">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="idSexta">
+                                    Sexta-feira
+                                </label>
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idSextaManha" name="nmSextaManha">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idSextaTarde" name="nmSextaTarde">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idSextaNoite" name="nmSextaNoite">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="idSabado">
+                                    Sábado
+                                </label>
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idSabadoManha" name="nmSabadoManha">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idSabadoTarde" name="nmSabadoTarde">
+                            </th>
+                            <th>
+                                <input type="checkbox" id="idSabadoNoite" name="nmSabadoNoite">
+                            </th>
+                        </tr>
+                    </table>
                     <br>                    
                     <form id="addFotosPerfil">
-                        <img id="imagens_previews" src="/img/foto-perfil.jpeg" alt="Imagens Previews">
+                        <img id="imagens_previews" src="/img/adicionar-fotos.png" alt="Imagens Previews">
                         <br><br><input type="file" id="imagens_input" multiple>
                     </form>
                         <br><br>

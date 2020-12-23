@@ -27,6 +27,7 @@ app.get('/', function(req, resp) {
 
 app.get('/cadastro', function(req, resp) {
     resp.render('cadastro');
+});
 
 app.get('/busca_cuidador', function(req, resp) {
     resp.render('busca_cuidador');    
