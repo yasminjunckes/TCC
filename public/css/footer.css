@@ -1,0 +1,20 @@
+footer{
+    background-color: #298971;
+    display: -webkit-box;
+    height: 250px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+footer img{
+    height: 60px;
+    width: 60px;
+}
+
+.footer-redesSociais {
+    padding-left: 300px;
+}
+
+.footer-infos {
+    padding-left: 100px;
+}
