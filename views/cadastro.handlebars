@@ -18,16 +18,14 @@
 </div>
 <main id="main-cadastro">
     <div>
-        <form action="">            
+        <form action="/cadastro" method="POST">            
             <fieldset class="fieldCadastro">
                 <label for="idNome"><b>Nome: </b></label>
                 <input type="text" id="idNome" name="nmNome">
                 <br><br>
-                <form id="fotoPerfil">
-                    <img id="img_preview" src="/img/foto-perfil.jpeg" alt="Image Preview">
-                    <br><br 
-                    ><input type="file" id="img_input">
-                </form>                
+                <img id="img_preview" src="/img/foto-perfil.jpeg" alt="Image Preview">
+                <br><br>
+                <input type="file" id="img_input">             
                 <br><br>
                 <div class="idInfos">
                     <label for="idDataNasc"><b>Data Nasc: </b></label>
@@ -66,6 +64,9 @@
                 <input class="botao" type="submit" value="Cadastrar" onclick="cadastrar()">
                 <input type="button" value="Quero ser um cuidador" id="idQueroSerCuidador">
             </fieldset>
+
+
+            
             <br>
             <div id="idEditar-Perfil" style="display: none;">
                 <fieldset class="fieldEditarPerfil">
@@ -149,12 +150,14 @@
         </form>
     </div>
 </main>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 
     document.getElementById("idQueroSerCuidador").addEventListener("click", function(){
         document.getElementById("idEditar-Perfil").style.display="block";
-    })
+    });
 
     function ImagePreview(input){
 
@@ -197,33 +200,4 @@
         });
 
     });
-
-    
-
-    function cadastrar() {
-
-        var nome = document.getElementById("idNome").value;
-        alert("Nome: " + nome);
-        var dataNasc = document.getElementById("idDataNasc").value;
-        alert("Data de nascimento: " + dataNasc);
-        var genero = document.getElementById("idGenero").value;
-        alert("Sexo: " + genero);
-        var telefones = document.getElementById("idTelefones").value;
-        alert("Telefone/Celular: " + telefones);
-        var cpf = document.getElementById("idCpf").value;
-        alert("CPF: " + cpf);
-        var cep = document.getElementById("idCep").value;
-        alert("CEP: " + cep);
-        var endereco = document.getElementById("idEndereco").value;
-        var numCasa = document.getElementById("idNumCasa").value;
-        alert("Rua " + endereco + " Nº " + numCasa);
-        var email = document.getElementById("idEmail").value;
-        alert("E-mail: " + email);
-        var senha = document.getElementById("idSenha").value;
-        alert("Senha: " + senha);
-        var confSenha = document.getElementById("idConfSenha").value;
-        alert("Confirmação de senha: " + confSenha);
-
-    }
-
 </script>
