@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/index.css" type="text/css">
+<!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+-->
+<title>All Care</title>
+
+<header>
+    <nav>
+
+        <!-- Cabeçalho -->
+        <a href="http://localhost:3000/Historia">Historia</a>
+        <span class="verticalLine"></span>
+
+        <a href="http://localhost:3000/quem_somos">Quem Somos</a>
+        <span class="verticalLine"></span>
+
+        <a href="http://localhost:3000/Contato">Contato</a>
+
+        <!-- Componente invisivel para fazer a separação do cabeçalho -->
+        <span class="separate"></span>
+
+        <a href="http://localhost:3000/Cadastro">Registre-se</a>
+        <span class="verticalLine"></span>
+
+        <a href="http://localhost:3000/login">Login</a>
+    </nav>
+    <span class="line"></span>
+    <br>
+</header>
+
+<main>
+    <!-- Logo -->
+    <img src="/img/logo-allcare.png" alt="" width="175px" height="125px"><br>
+
+    <h1>A L L <br> C A R E</h1>
+    <h2>CUIDAMOS DE QUEM VOCÊ AMA </h2><br>
+    <br>
+
+    <select name="selectTipo" id="idSelectTipo">
+        <option value="Idoso">Idoso</option>
+        <option value="Criança">Criança</option>
+        <option value="Cachorro">Cachorro</option>
+    </select>
+
+    <input type="text" class="procura" id="idInputCep" placeholder="Informe sua localização" on>
+
+
+</main>
+<script>
+    /* Redirecionamento de pagina */
+    document.querySelector('#idInputCep').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            window.location.href = 'http://localhost:3000/busca_cuidador'
+        }
+    });
+
+
+</script>

@@ -1,0 +1,66 @@
+body {
+    background-color: #92DECB;
+    color: black;
+    font-family: Verdana, sans-serif;
+}
+
+main {
+    text-align: center;
+    padding-top: 7%;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+}
+
+h2 {
+    opacity: 50%;
+    letter-spacing: 4px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.line {
+    position: relative;
+    border-bottom: 4px solid black;
+    display: block;
+    max-width: 94%;
+    padding: 8px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+nav {
+    font-size: 18px;
+    margin-top: 20px;
+    padding-left: 60px;
+    height: 16px;
+    margin-bottom: 3px;
+}
+
+a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.separate {
+    margin-left: 70%;
+}
+
+.verticalLine {
+    border-left: 2px solid black;
+    height: 13px;
+}
+
+select {
+    height: 35px;
+    width: 6%
+}
+
+input {
+    width: 30%;
+    height: 35px;
+}
