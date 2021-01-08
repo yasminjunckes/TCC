@@ -4,7 +4,11 @@
     padding-bottom: 30px;
     padding-left: 30px;
 }
+#idIdade {
+    width: 40px;
+    border-radius: 5px;
 
+}
 #mapa{
     height: 100px;
     width: 100px;

@@ -1,3 +1,5 @@
+/*Cadastro*/
+
 #main-cadastro {
     margin-top: 40px;    
 }
@@ -6,6 +8,7 @@
     margin-left: 300px;
     margin-top: -30px;
     border-color: #92DECB;
+    border-radius: 10px
 }
 #idNome {
     width: 295px;
@@ -14,10 +17,11 @@
     margin-left: 405px;
 }
 #img_preview {
-    border: 1px solid  #92DECB;
+    border: 2px solid #92DECB;
     width: 150px;
     height: 150px;
     margin-left: 485px;
+    border-radius: 10px;
 }
 .idInfos {
     margin-top: -210px;
@@ -44,18 +48,26 @@
     width: 180px;
 }
 
-/*
-Editar perfil cuidador
-*/
-#idDescricao {
-    width: 500px;
-    height: 100px;
-    margin-left: 0px;
-    border-color: #92DECB;
-    margin-top: 40px;
-}
+/* Editar perfil cuidador */
+
 .fieldEditarPerfil {
     width: 700px;
     margin-left: 300px;
     border-color: #92DECB;
+    border-radius: 10px;
+}
+#imagens_previews {
+    margin-left: 450px;
+    margin-top: -10px;
+    width: 150px;
+}
+#imagens_input {
+    margin-left: 400px;
+}
+.idPeriodo_Descricao {
+    margin-top: -190px;
+}
+#idDescricao {
+    resize: none;
+    width: 694px;
 }
