@@ -12,7 +12,7 @@ main {
 h1 {
     font-size: 60px;
     font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 30px;
+    margin-bottom: 2%;
 }
 
 h2 {
@@ -27,32 +27,32 @@ h2 {
     border-bottom: 4px solid black;
     display: block;
     max-width: 94%;
-    padding: 8px;
+    padding: 0.5%;
     margin: auto;
     border-radius: 5px;
 }
 
 nav {
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 1%;
     padding-left: 60px;
     height: 16px;
     margin-bottom: 3px;
 }
 
 a {
-    margin: 10px;
+    margin: 0.5%;
     text-decoration: none;
     color: black;
 }
 
 .separate {
-    margin-left: 70%;
+    padding-left: 68%;
 }
 
 .verticalLine {
     border-left: 2px solid black;
-    height: 13px;
+    height: 3%;
 }
 
 select {
