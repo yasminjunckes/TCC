@@ -43,3 +43,7 @@ app.use('/quem_somos', quem_somos);
 //controller quem_somos
 const login = require('./controllers/controller_login');
 app.use('/login', login);
+
+//controller fale_conosco
+const contato = require('./controllers/controller_contato');
+app.use('/contato', contato);
