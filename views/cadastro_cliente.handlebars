@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="/css/cadastro.css" type="text/css">
+<title>Cadastro Cliente</title>
+
+<main id="main-cadastro">
+    <div>
+        <form action="/cadastro" method="POST">            
+            <fieldset class="fieldCadastro">
+                <label for="idNome"><b>Nome: </b></label>
+                <input type="text" id="idNome" name="nmNome">
+                <br><br>
+                
+                <form id="fotoPerfil">
+                    <img id="img_preview" src="/img/adicionar-fotos.png" alt="Image Preview">
+                    <br><br 
+                    ><input type="file" id="img_input">
+                </form>                
+                
+                <br><br>
+                <div class="idInfos">
+                    <label for="idDataNasc"><b>Data Nasc: </b></label>
+                    <input type="date" id="idDataNasc" name="nmDataNasc">
+                    <label for="idGenero"><b>Sexo: </b></label>
+                    <select name="nmGenero" id="idGenero">
+                        <option value="masculino"><b>Masculino</b></option>
+                        <option value="feminino"><b>Feminino</b></option>
+                    </select>
+                    <br><br>
+                    <label for="idTelefones"><b>Telefone/Celular :</b></label>
+                    <input type="text" id="idTelefones" name="nmTelefones">
+                    <br><br>
+                    <label for="idCpf"><b>CPF: </b></label>
+                    <input type="text" id="idCpf" name="nmCpf">
+                    <br><br>
+                    <label for="idCep"><b>CEP: </b></label>
+                    <input type="text" id="idCep" name="nmCep">
+                    <br><br>
+                    <label for="idEndereco"><b>Endereço: </b></label>
+                    <input type="text" id="idEndereco" name="nmEndereco">
+                    
+                    <label for="idNumCasa"><b>Nº: </b></label>
+                    <input type="idNumCasa" id="idNumCasa" name="nmNumCasa">
+                    <br><br>
+                    <label for="idEmail"><b>E-mail: </b></label>
+                    <input type="text" id="idEmail" name="nmEmail">
+                    <br><br>
+                    <label for="idSenha"><b>Crie a sua senha: </b></label>
+                    <input type="password" id="idSenha" name="nmSenha">
+                    <br><br>
+                    <label for="idConfSenha"><b>Confirme sua senha</b></label>
+                    <input type="password" id="idConfSenha" name="nmConfSenha">
+                </div>
+                <br><br>
+                <input class="botao" type="submit" value="Cadastrar" onclick="cadastrar()">
+            </fieldset>
+        </form>
+    </div>
+</main>
+{{!-- Configurei o editar perfil, alterei posição e tamanho da imagem, comecei a mexer com css (estilos, tamanhos ,etc) --}}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    function ImagePreview(input){
+        if (input.files && input.files[0])
+        {
+            var r = new FileReader();
+            r.onload = function(e)
+            {
+                $("#img_preview").show();
+                $("#img_preview").attr("src", e.target.result);
+            }
+            r.readAsDataURL(input.files[0]);
+        }
+    }
+    $().ready(function() {
+        hide_empty_image = false;
+        set_blank_to_empty_image = false;
+        set_image_border = true;
+        if (hide_empty_image)
+            $("#img_preview").hide();
+        if (set_blank_to_empty_image)
+            $("#img_preview").attr("src","data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=");
+        if (set_image_border)
+            $("#img_preview").css("border", "1px solid #05bbcc");
+    
+        $("#img_preview").css("width", "150px");
+        $("#img_preview").css("height", "150px");
+        $("#img_input").change(function(){
+            ImagePreview(this);
+        });
+    });
+</script>
