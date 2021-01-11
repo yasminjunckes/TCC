@@ -10,6 +10,8 @@ mongoose.connect("mongodb://localhost/allcare", {useMongoClient: true})
   });
 
 require('./usuario_model');
-require('./cuidador_model');
 require('./servico_model');
 require('./endereco_model');
+require('./cuidador_cachorro_model');
+require('./cuidador_crianca_model');
+require('./cuidador_idoso_model');

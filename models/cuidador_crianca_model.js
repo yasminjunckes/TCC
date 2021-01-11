@@ -1,8 +1,12 @@
 const mongoose = require("mongoose"); 
 mongoose.Promise = global.Promise; 
 
-const CuidadorSchema = mongoose.Schema({
+const CuidadorCriancaSchema = mongoose.Schema({
 
+    idCuidador: {
+        type: String,
+        require: true
+    },
     agenda: {
         type: String,
         require: true
@@ -15,23 +19,22 @@ const CuidadorSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    cachorro: {
-        type: Boolean,
-        require: true
-    },
-    idoso: {
-        type: Boolean,
-        require: true
-    },
-    crianca: {
-        type: Boolean,
-        require: true
-    },
-    idCuidador: {
+    localCuidado: {
         type: String,
         require: true
+    },
+    sexo: {
+        type: String,
+        require: true
+    },
+    idadeMin: {
+        type: Number,
+        require: true
+    },
+    idadeMax: {
+        type: Number,
+        require: true
     }
-
 });
 
-mongoose.model('cuidador', CuidadorSchema);
+mongoose.model('cuidador_crianca', CuidadorCriancaSchema);
