@@ -1,21 +1,16 @@
-body {
-    background-color: #92DECB;
-    color: black;
-    font-family: Verdana, sans-serif;
-}
-
-main {
+#index {
     text-align: center;
     padding-top: 7%;
+    padding-bottom: 7%;
 }
 
-h1 {
+#hIndex {
     font-size: 60px;
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 2%;
 }
 
-h2 {
+#h2Index {
     opacity: 50%;
     letter-spacing: 4px;
     font-size: 25px;
@@ -40,14 +35,8 @@ nav {
     margin-bottom: 3px;
 }
 
-a {
-    margin: 0.5%;
-    text-decoration: none;
-    color: black;
-}
-
 .separate {
-    padding-left: 68%;
+    padding-left: 55%;
 }
 
 .verticalLine {
